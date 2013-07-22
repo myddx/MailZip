@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Exception Management Data Loader" default="mail" basedir=".">
+<target name="mail">
+<mail mailhost="Mail-Server-host.com" mailport="25" subject="Analytic XLSX Results">
+  <from address="stanislav_volo@acl.com"/>
+  <replyto address="stanislav_volo@acl.com"/>
+  <to address="stanislav_volo@acl.com"/>
+  <message>Completed Analytic XLSX Results</message>
+  <attachments>
+    <fileset dir="${basedir}">
+      <include name="**/*.zip"/>
+    </fileset>
+  </attachments>
+</mail>
+
+</target>
+</project>
